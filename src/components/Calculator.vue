@@ -25,31 +25,31 @@ function useForInput(numb){
         <div class="input-part">
             <input class="input-for-expression" v-model="expression" placeholder="Enter your expression"/>
             <div class="buttons">
-                <div class="buttons_Column1">
-                    <button class="button" @click="useForInput(1)">1</button>
-                    <button class="button" @click="useForInput(4)">4</button>
-                    <button class="button" @click="useForInput(7)">7</button>
-                    <button class="button" @click="useForInput('(')">(</button>
+                <div>
+                    <el-button type="primary" circle @click="useForInput(1)">1</el-button>
+                    <el-button type="primary" circle @click="useForInput(4)">4</el-button>
+                    <el-button type="primary" circle @click="useForInput(7)">7</el-button>
+                    <el-button type="primary" circle @click="useForInput('(')">(</el-button>
                     </div>
-                <div class="buttons_Column2">
-                    <button class="button" @click="useForInput(2)">2</button>
-                    <button class="button" @click="useForInput(5)">5</button>
-                    <button class="button" @click="useForInput(8)">8</button>
-                    <button class="button" @click="useForInput(0)">0</button>
+                <div>
+                    <el-button type="primary" circle @click="useForInput(2)">2</el-button>
+                    <el-button type="primary" circle @click="useForInput(5)">5</el-button>
+                    <el-button type="primary" circle @click="useForInput(8)">8</el-button>
+                    <el-button type="primary" circle @click="useForInput(0)">0</el-button>
                 </div>
-                <div class="buttons_Column3">
-                    <button class="button" @click="useForInput(1)">3</button>
-                    <button class="button" @click="useForInput(4)">6</button>
-                    <button class="button" @click="useForInput(7)">9</button>
-                    <button class="button" @click="useForInput(')')">)</button>
+                <div>
+                    <el-button type="primary" circle @click="useForInput(1)">3</el-button>
+                    <el-button type="primary" circle @click="useForInput(4)">6</el-button>
+                    <el-button type="primary" circle @click="useForInput(7)">9</el-button>
+                    <el-button type="primary" circle @click="useForInput(')')">)</el-button>
                 </div>
-                <div class="buttons_Column4">
-                    <button class="button" @click="useForInput('+')">+</button>
-                    <button class="button" @click="useForInput('-')">-</button>
-                    <button class="button" @click="useForInput('*')">*</button>
-                    <button class="button" @click="useForInput('/')">/</button>
+                <div>
+                    <el-button type="primary" circle @click="useForInput('+')">+</el-button>
+                    <el-button type="primary" circle @click="useForInput('-')">-</el-button>
+                    <el-button type="primary" circle @click="useForInput('*')">*</el-button>
+                    <el-button type="primary" circle @click="useForInput('/')">/</el-button>
                 </div>
-                <button class="button" @click="calculate">=</button>
+                <el-button type="primary" circle @click="calculate">=</el-button>
             </div>
         </div>
         <div class="result-part">
@@ -80,18 +80,6 @@ function useForInput(numb){
     border-radius: 12px;
     padding: 8px;
     color: yellow;
-    font-family: 
-        system-ui, 
-        -apple-system, 
-        BlinkMacSystemFont, 
-        'Segoe UI', 
-        Roboto, 
-        Oxygen, 
-        Ubuntu, 
-        Cantarell, 
-        'Open Sans', 
-        'Helvetica Neue', 
-        sans-serif;
 }
 
 .input-for-expression{
@@ -101,53 +89,37 @@ function useForInput(numb){
 }
 
 .buttons{
-    display: flex;
     margin: 12px;
     margin-top: 0px;
     background-color: rgb(18, 18, 18);
-    gap: 3px;
 }
 
 .buttons_Column1{
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    justify-content: start;
+    align-items: flex-start;
 }
 
 .buttons_Column2{
     display: flex;
     flex-direction: column;
-    gap: 3px;
 }
 
 .buttons_Column3{
     display: flex;
     flex-direction: column;
-    gap: 3px;
 }
 
 .buttons_Column4{
     display: flex;
     flex-direction: column;
-    gap: 3px;
 }
 
 .button{
     flex: 1;
     border-radius: 9px;
     border: none;
-    font-family: 
-        system-ui, 
-        -apple-system, 
-        BlinkMacSystemFont, 
-        'Segoe UI', 
-        Roboto, 
-        Oxygen, 
-        Ubuntu, 
-        Cantarell, 
-        'Open Sans', 
-        'Helvetica Neue', 
-        sans-serif;
     cursor: pointer;
 }
 
